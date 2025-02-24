@@ -22,9 +22,6 @@ def load_registered_faces(dataset_path):
                 # Add to the known faces list
                 known_face_encodings.append(face_encoding)
                 known_face_names.append(name)
-                print(f"Added {name} to known faces.")
-            else:
-                print(f"No face found in {filename}. Skipping.")
 
     return known_face_encodings, known_face_names
 

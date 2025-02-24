@@ -3,10 +3,12 @@ import os
 import numpy as np
 from PIL import Image
 
-# Path to the dataset
 dataset_path = 'dataset'
 
-# Initialize LBPH face recognizer
+# Load the face detection model
+face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+
+# Load the face recognition model
 recognizer = cv2.face.LBPHFaceRecognizer_create()
 
 # Function to get images and labels
